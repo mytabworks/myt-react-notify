@@ -5,6 +5,7 @@ module.exports = {
     entry: './Components/myt-react-notify/',
     externals : {
         react: 'react',
+        'react-dom': 'react-dom',
         'myt-react-snippets': 'myt-react-snippets'
     },
     output: {

@@ -148,7 +148,7 @@ The datatypes with "*" means it is required.
 
 |PROPERTY   |DATATYPES    |DEFAULT    |DESCRIPTION|
 |-------------|-----------|-------------|-------------| 
-| template       | {<br/>&nbsp;&nbsp;title: string, <br/>&nbsp;&nbsp;message: string, <br/>&nbsp;&nbsp;variant: "success"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"primary"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"warning"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"danger", <br/>&nbsp;&nbsp;dismissible: boolean<br/> } |   | It is the properties of default template. if using default templating you must import the stylesheet `import "myt-react-notify/template.css"`. <br/>  `default` `{ title: null, message: "", variant: "default", dismissible: true }` |
+| template       | {<br/>&nbsp;&nbsp;title: string, <br/>&nbsp;&nbsp;message: string, <br/>&nbsp;&nbsp;variant: "success"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"primary"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"warning"<br/>&nbsp;&nbsp;&nbsp;&nbsp;\|"danger", <br/>&nbsp;&nbsp;dismissible: boolean<br/> } | &nbsp;  | It is the properties of default template. if using default templating you must import the stylesheet `import "myt-react-notify/template.css"`. <br/>  `default` `{ title: null, message: "", variant: "default", dismissible: true }` |
 | animation | object |  &nbsp; | you can set a customize animations. <br/>`default` `{ enter: "fade-notify-in", exit: "fade-notify-out" }` | 
 | timing   | number        |   1000          | It is the duration of each animation |
 | delay   | number        |   5000          | It is the duration of notification will last. if the delay is set `0` it will remain forever unless dismiss |
