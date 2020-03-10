@@ -15,6 +15,7 @@
   color: inherit;
   position: relative;
   top: -1px;
+  cursor: pointer;
 }
 .notify-template > p {
   flex-grow: 1;

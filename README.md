@@ -4,7 +4,7 @@
 [![bundlephobia](https://img.shields.io/bundlephobia/minzip/myt-react-notify?color=%2371bba4&logo=bundlephobia&style=for-the-badge)](https://bundlephobia.com/result?p=myt-react-notify)
 
 # myt-react-notify
-This underated react notification was build from the ground up, which can be use as component and can use customize component as templates.
+This underated react notification was build from the ground up so expect it to be a tree shaking. it can be use as a component which allow you to use customize component as templates.
 
 - [Installation](#installation)
 - [How To Use](#how-to-use)
