@@ -13,6 +13,8 @@ This react notification library is a gold. It is easy to use and undestand becau
     - [Customize Template Usage](#customize-template-usage)
     - [Animation Usage](#animation-usage)
     - [Remaining Notification Usage](#remaining-notification-usage)  
+    - [Customize Default Template Usage](#customize-default-template-usage)
+    - [Updating Notification Usage](#updating-notification-usage)
 - [Properties](#properties)  
 - [License](#license)
 
@@ -39,6 +41,7 @@ visit playground 👉 [![Edit notification machine](https://codesandbox.io/stati
 ```js
 import { Notification, Render } from "myt-react-notify"
 ```
+<br/>
   
 ## Normal Usage
 Notification has a default template stylesheet that can be use/imported when using template option, if not using template and use your own template don`t import it.<br/><br/>
@@ -63,10 +66,10 @@ import "myt-react-notify/template.css"
 Show Notification
 </button>
 ```
-
+<br/>
 
 ## Customize Template Usage
-You can customize your own template. if your customize template is a component, it must be `React.forwardRef` component to get the node element of container<br/><br/>
+You can make template of your own. <br/><br/>
 [![Edit myt-react-notify-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/long-voice-4dvho?fontsize=14&hidenavigation=1&theme=dark)
 ```js 
 import {Alert, Button} from "react-bootstrap"
@@ -91,7 +94,7 @@ import {Alert, Button} from "react-bootstrap"
   Show Alert
 </Button>
 ```
-
+<br/>
 
 ## Animation Usage
 You can use a custom animation class using @keyframe for this component.<br/>
@@ -119,6 +122,7 @@ You can use a custom animation class using @keyframe for this component.<br/>
 Show Animated Notification
 </button>
 ```
+<br/>
 
 ## Remaining Notification Usage
 You can remove the timeout of the notification by setting `delay` as `0`.<br/><br/> 
@@ -145,7 +149,94 @@ You can remove the timeout of the notification by setting `delay` as `0`.<br/><b
 Show No Timeout Notification 
 </button>
 ```
+<br/>
 
+## Customize Default Template Usage
+You can customize the default template as well.<br/><br/> 
+[![Edit myt-react-notify-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/long-voice-4dvho?fontsize=14&hidenavigation=1&theme=dark)
+```js
+<button
+  className="btn"
+  onClick={() => {
+    Render(
+      <Notification
+        template={{
+          message: (
+            <a
+              href="https://codesandbox.io/s/notification-machine-rql5k?fontsize=14&hidenavigation=1&theme=dark"
+              target="_blanks"
+              style={{ textDecoration: "none" }}
+            >
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/28913097?v=4"
+                  alt="beard"
+                  width="20%"
+                />
+                <span style={{ padding: "10px 15px" }}>
+                  hey check me out
+                </span>
+              </div>
+            </a>
+          ),
+          variant: "primary",
+          dismissible: true
+        }}
+        animation={{
+          enter: "animated bounceInLeft",
+          exit: "animated fadeOutDown"
+        }}
+        timing={1000}
+        delay={4000}
+      />
+    );
+  }}
+>
+  Customize Default Template
+</button>
+```
+<br/>
+
+## Updating Notification Usage
+You can update or change notification anytime and anywhere using `id` which must be unique.<br/><br/> 
+[![Edit myt-react-notify-usage](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/long-voice-4dvho?fontsize=14&hidenavigation=1&theme=dark)
+```js
+<button className="btn" onClick={() => {
+  Render(
+    <Notification 
+      id="notify"
+      template={{
+        title: "Hey!",
+        message: "what is up?",
+        variant: "primary",
+      }} 
+      onEntered={()=> Render(
+        <Notification 
+          id="notify"
+          template={{
+            title: "Pal!",
+            message: "wooow I can change",
+            variant: "success",
+          }}  
+        />
+      )}
+      onExit={()=> Render(
+        <Notification 
+          id="notify"
+          template={{
+            title: "Yo!",
+            message: "I'am going now bye",
+            variant: "danger",
+          }}  
+        />
+      )}
+    />
+  );  
+}}>
+  Updating Notification
+</button>
+```
+<br/>
 
 ## PROPERTIES
 All properties that is supported by Notification Component.<br/>
@@ -159,7 +250,16 @@ The datatypes with "*" means it is required.
 | delay   | number        |   5000          | It is the duration of notification will last. if the delay is set `0` it will remain forever unless dismiss |
 | placement    | top-left\|top-right\|bottom-left\|bottom-right        | bottom-right | the placement where the notification will remain|
 | children     | function        |      &nbsp;       | It enables you to make a [customize template](#customize-template-usage) | 
+| onEnter      | function | &nbsp;     | it is invoke when the animation is started to enter |
+| onEntering   | function | &nbsp;     | it is invoke when the animation is entering |
+| onEntered    | function | &nbsp;     | it is invoke when the animation is fully entered |
+| onExit       | function | &nbsp;     | it is invoke when the animation is started to exit |
+| onExiting    | function | &nbsp;     | it is invoke when the animation is exiting |
+| onExited     | function | &nbsp;     | it is invoke when the animation is fully exited |
+| onMounted     | function | &nbsp;     | it is invoke when the component is mounted |
 
+## Specials
+you can remove notification in mobile using swipe from left to right.
 
 ## License
 MIT Licensed. Copyright (c) Mytabworks 2020.

@@ -13,6 +13,8 @@ export interface TemplateProps {
     variant?: "success"|"primary"|"danger"|"warning";
     dismissible?: boolean;
 }
+
+type eventHandler = (node?: any) => void
  
 export interface NotificationProps { 
     template?:  TemplateProps;
@@ -20,7 +22,13 @@ export interface NotificationProps {
     timing?:    number;
     delay?:    number;
     placement?: "top-left"|"top-right"|"bottom-left"|"bottom-right";
-    children?:   (show: any) => JSX.Element; 
+    children?:   (show: any) => JSX.Element;
+    onEnter?: eventHandler; 
+    onEntering?: eventHandler; 
+    onEntered?: eventHandler; 
+    onExit?: eventHandler; 
+    onExiting?: eventHandler; 
+    onExited?: eventHandler; 
 }
 
 export const Notification: React.FunctionComponent<NotificationProps>

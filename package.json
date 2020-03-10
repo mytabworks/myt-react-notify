@@ -1,6 +1,6 @@
 {
     "name": "myt-react-notify",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "main": "lib/index.js",
     "description": "React Notification Super Light-Weight. Unique set-up, Easy, and NO-REGRETS.",
     "repository": {
