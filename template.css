@@ -1,0 +1,52 @@
+.notify-template {
+  display: flex;
+  align-content: space-between;
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 8px 6px -6px black;
+  user-select: none;
+}
+.notify-template > button {
+  text-shadow: 0px 0px 1px #0903038a;
+  font-size: 22px;
+  line-height: 1;
+  outline: 0 !important;
+  color: inherit;
+  position: relative;
+  top: -1px;
+}
+.notify-template > p {
+  flex-grow: 1;
+  margin-left: 5px !important;
+}
+.notify-template > * {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.notify-template.success {
+  background-color: #49bfba;
+  border: 1px solid #49bfba;
+}
+
+.notify-template.danger {
+  background-color: #e57373;
+  border: 1px solid #e57373;
+}
+
+.notify-template.warning {
+  background-color: #e8bd8a;
+  border: 1px solid #e8bd8a;
+}
+
+.notify-template.primary {
+  background-color: #37b2e4;
+  border: 1px solid #37b2e4;
+}
+
+.notify-template.default {
+  background-color: #fff;
+  color: #7c7c7c;
+}
