@@ -4,7 +4,7 @@
 [![bundlephobia](https://img.shields.io/bundlephobia/minzip/myt-react-notify?color=%2371bba4&logo=bundlephobia&style=for-the-badge)](https://bundlephobia.com/result?p=myt-react-notify)
 
 # myt-react-notify
-This underated react notification was build from the ground up so expect it to be a tree shaking. it can be use as a component which allow you to use customize component as templates.
+This react notification library is a gold. It is easy to use and undestand because it is uniquely engineered and it don`t need a complicated set-up for container and trigger like the majority does. This library set-up feels normal component and handy to understand which makes it unique, it can be render in any functions as component which allow developer to use customize component as templates. and plus it is just 6kb gzip minified, it is so light it can make the tree shaking and feather flying with no regrets.
 
 - [Installation](#installation)
 - [How To Use](#how-to-use)
