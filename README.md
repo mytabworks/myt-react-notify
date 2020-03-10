@@ -26,8 +26,9 @@ yarn
 ```
 yarn add myt-react-notify
 ```
+<br/>
 
-visit 👉 [![Edit notification machine](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/notification-machine-rql5k?fontsize=14&hidenavigation=1&theme=dark) to see the playground machine.<br/>
+visit playground 👉 [![Edit notification machine](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/notification-machine-rql5k?fontsize=14&hidenavigation=1&theme=dark)<br/>
 
 
 
