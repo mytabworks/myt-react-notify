@@ -9,6 +9,7 @@
 	transition: 400ms ease-in-out;
 }
 .notify-template > button {
+	align-self: flex-start;
 	text-shadow: 0px 0px 1px #0903038a;
 	font-size: 22px;
 	line-height: 1;
@@ -17,7 +18,7 @@
 	position: relative;
 	top: -1px;
 }
-.notify-template > p {
+.notify-template > .message {
 	flex-grow: 1;
 	margin-left: 5px !important;
 }
